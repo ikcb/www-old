@@ -17,6 +17,18 @@
         "maintenance",
         "review"
       ]
+    },
+    {
+      "login": "pc-beast",
+      "name": "Pavnesh Chaturvedi",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/56963647?v=4",
+      "profile": "https://github.com/pc-beast",
+      "contributions": [
+        "code",
+        "design",
+        "projectManagement",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
