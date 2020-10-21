@@ -1,4 +1,4 @@
-# IIIT Kota CodeBase &emsp; [![Build Status](https://travis-ci.org/iiitkota-codebase/iiitkota-codebase.github.io.svg?branch=master)](https://travis-ci.org/iiitkota-codebase/iiitkota-codebase.github.io)
+# IIIT Kota CodeBase &nbsp; [![Build Status](https://travis-ci.org/iiitkota-codebase/iiitkota-codebase.github.io.svg?branch=master)](https://travis-ci.org/iiitkota-codebase/iiitkota-codebase.github.io)
 
 <!-- prettier-ignore-start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
