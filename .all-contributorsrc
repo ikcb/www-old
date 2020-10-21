@@ -4,6 +4,7 @@
   ],
   "imageSize": 100,
   "commit": false,
+  "badgeTemplate": "[![Build Status](https://travis-ci.org/iiitkota-codebase/iiitkota-codebase.github.io.svg?branch=master)](https://travis-ci.org/iiitkota-codebase/iiitkota-codebase.github.io) &nbsp; [![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg)](#contributors) &nbsp; [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)",
   "contributors": [
     {
       "login": "brc-dd",
