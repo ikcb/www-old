@@ -4,12 +4,11 @@
   "private": true,
   "homepage": "https://iiitkota-codebase.github.io",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "bootstrap": "^4.5.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.4"
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -44,5 +43,8 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "optionalDependencies": {
+    "typescript": "^4.0.3"
   }
 }
