@@ -13,9 +13,9 @@
       "profile": "https://stackoverflow.com/users/11613622/brc-dd",
       "contributions": [
         "code",
-        "ideas",
-        "maintenance",
-        "review"
+        "content",
+        "doc",
+        "design"
       ]
     },
     {
@@ -25,9 +25,9 @@
       "profile": "https://github.com/pc-beast",
       "contributions": [
         "code",
-        "design",
-        "projectManagement",
-        "review"
+        "ideas",
+        "maintenance",
+        "mentoring"
       ]
     }
   ],
