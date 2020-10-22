@@ -26,7 +26,6 @@ Thanks goes to these wonderful people ✨:
 </table>
 
 <!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 <!-- prettier-ignore-end -->
 
