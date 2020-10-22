@@ -1,0 +1,27 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "vaibhav-jain18",
+      "name": "Vaibhav Jain",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/56963087?v=4",
+      "profile": "https://github.com/vaibhav-jain18",
+      "contributions": [
+        "code",
+        "review",
+        "projectManagement",
+        "tool"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "iiitkota-codebase.github.io",
+  "projectOwner": "iiitkota-codebase",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
