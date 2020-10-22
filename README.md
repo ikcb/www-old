@@ -5,9 +5,9 @@
 
 This repository is the landing page of IIIT Kota CodeBase. You can access the website at [codebase.iiitkota.tech](https://codebase.iiitkota.tech/)
 
-## Contributors ✨
+## Contributors
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people ✨:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
