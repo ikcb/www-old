@@ -27,6 +27,18 @@
         "ideas",
         "maintenance"
       ]
+    },
+    {
+      "login": "vaibhav-jain18",
+      "name": "Vaibhav Jain",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/56963087?v=4",
+      "profile": "https://github.com/vaibhav-jain18",
+      "contributions": [
+        "code",
+        "review",
+        "projectManagement",
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
