@@ -15,7 +15,8 @@
         "code",
         "content",
         "doc",
-        "design"
+        "design",
+        "infra"
       ]
     },
     {
