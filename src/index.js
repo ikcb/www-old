@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-// import global css files here
+// import global stylesheets here
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// import user defined components here
+// import userdef components here
 import UnderConstruction from 'components/UnderConstruction';
 
 ReactDOM.render(
