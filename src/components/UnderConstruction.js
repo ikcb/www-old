@@ -8,12 +8,10 @@ export default function UnderConstruction() {
   const { height, width } = useWindowDimensions();
 
   useLayoutEffect(() => {
-    if (el.current.scrollHeight <= height)
-      el.current.classList.add(...['vh-100', 'overflow-y-hidden']);
-    else el.current.classList.remove(...['vh-100', 'overflow-y-hidden']);
-    if (el.current.scrollWidth <= width)
-      el.current.classList.add(...['vw-100', 'overflow-x-hidden']);
-    else el.current.classList.remove(...['vw-100', 'overflow-x-hidden']);
+    if (el.current.scrollHeight <= height) el.current.classList.add('vh-100');
+    else el.current.classList.remove('vh-100');
+    if (el.current.scrollWidth <= width) el.current.classList.add('vw-100');
+    else el.current.classList.remove('vw-100');
   });
 
   return (
