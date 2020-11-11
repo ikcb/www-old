@@ -1,6 +1,6 @@
 // code taken from https://stackoverflow.com/a/36862446/11613622 under CC BY-SA 4.0
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
