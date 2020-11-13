@@ -1,7 +1,6 @@
-import React, { useRef, useLayoutEffect } from 'react';
-import useWindowDimensions from 'utils/WindowDimensions';
-
 import { ReactComponent as Gear } from 'assets/images/gear.svg';
+import React, { useLayoutEffect, useRef } from 'react';
+import useWindowDimensions from 'utils/WindowDimensions';
 
 export default function UnderConstruction() {
   const el = useRef();

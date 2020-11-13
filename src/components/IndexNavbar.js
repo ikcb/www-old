@@ -1,5 +1,6 @@
-import { ReactComponent as Logo } from 'assets/images/logo.svg';
 import 'assets/styles/_indexNavbar.scss';
+
+import { ReactComponent as Logo } from 'assets/images/logo.svg';
 import $ from 'jquery';
 import { debounce } from 'lodash';
 import React, { useEffect, useState } from 'react';
@@ -52,7 +53,7 @@ export default function HomePage() {
         fixed="top"
         bg="transparent"
         variant="dark"
-        onSelect={() => document.documentElement.classList.remove('nav-open')}
+        onSelect={() => $(document.documentElement).removeClass('nav-open')}
       >
         <Container className="mt-lg-5 mt-3">
           <div className="navbar-translate">
@@ -63,7 +64,7 @@ export default function HomePage() {
             <Navbar.Toggle
               aria-controls="responsive-navbar-nav"
               onClick={() =>
-                document.documentElement.classList.toggle('nav-open')
+                $(document.documentElement).toggleClass('nav-open')
               }
             >
               <span className="navbar-toggler-bar bar1" />

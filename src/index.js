@@ -1,9 +1,10 @@
 import 'assets/styles/_index.scss';
+
 import HomePage from 'components/HomePage';
 import UnderConstruction from 'components/UnderConstruction';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 ReactDOM.render(
   <Router>
