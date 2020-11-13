@@ -12,9 +12,14 @@ export default function HomePage() {
   useEffect(() => {
     const handleNavbarTranslateOnResize = () =>
       setNavbarBrandWidth(
-        document
-          .getElementsByClassName('navbar-brand')[0]
-          .getBoundingClientRect().right + 32
+        [
+          $('.navbar').css('padding-left'),
+          $('.navbar .container').css('margin-left'),
+          $('.navbar-brand').css('width'),
+          $('.navbar-brand').css('margin-right')
+        ]
+          .map(parseFloat)
+          .reduce((a, b) => a + b, 0) + 16
       );
 
     const handleClickOutsideNav = e => {
@@ -42,7 +47,7 @@ export default function HomePage() {
   return (
     <>
       <style>
-        {`@media (max-width: 991.98px) {.nav-open .navbar-translate {transform: translateX(-${navbarBrandWidth}px)} .navbar-collapse {width: ${
+        {`@media (max-width:991.98px){.nav-open .navbar-translate{transform:translateX(${-navbarBrandWidth}px)}.navbar-collapse{width:${
           navbarBrandWidth + 16
         }px}}`}
       </style>
