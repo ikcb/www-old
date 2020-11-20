@@ -83,12 +83,24 @@ export default function HomePage() {
             className="justify-content-end acrylic"
           >
             <Nav>
-              <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#events">Events</Nav.Link>
-              <Nav.Link href="#projects">Projects</Nav.Link>
-              <Nav.Link href="#members">Members</Nav.Link>
-              <Nav.Link href="/blog">Blog</Nav.Link>
-              <Nav.Link href="#contact">Contact Us</Nav.Link>
+              <Nav.Link id="refAbout" href="#about">
+                About
+              </Nav.Link>
+              <Nav.Link id="refEvents" href="#events">
+                Events
+              </Nav.Link>
+              <Nav.Link id="refProjects" href="#projects">
+                Projects
+              </Nav.Link>
+              <Nav.Link id="refMembers" href="#members">
+                Members
+              </Nav.Link>
+              <Nav.Link id="refBlog" href="/blog">
+                Blog
+              </Nav.Link>
+              <Nav.Link id="refContact" href="#contact">
+                Contact Us
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
