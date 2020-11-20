@@ -85,8 +85,8 @@
     .navbar-brand {
       font-weight: 500;
       font-size: 1.25rem;
-      color: #e9ecef;
       text-transform: uppercase;
+      outline: none;
 
       .nav-logo {
         height: 3rem;
@@ -117,10 +117,36 @@
     }
   }
 
-  &.navbar-transparent {
+  &.navbar-dark {
     .navbar-toggler {
       .navbar-toggler-bar {
         background: #fff !important;
+      }
+    }
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      background: rgba(#000303, 0.7);
+
+      @supports (backdrop-filter: blur(24px)) {
+        background: rgba(#000303, 0.3);
+        backdrop-filter: blur(24px);
+        @media (max-width: 991.98px) {
+          backdrop-filter: blur(6px);
+        }
+      }
+    }
+  }
+
+  &:not(.navbar-dark) {
+    .navbar-toggler {
+      .navbar-toggler-bar {
+        background: #000 !important;
       }
     }
   }
@@ -185,8 +211,8 @@ button:not(.collapsed) {
     padding-left: 1rem;
     padding-top: 1.25rem;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
+    background: rgba(#000, 0.7);
+    // backdrop-filter: blur(10px);
 
     &.collapsing {
       right: -100%;
@@ -199,6 +225,60 @@ button:not(.collapsed) {
       margin-right: 100%;
       transition: all 0.2s ease;
       opacity: 1;
+    }
+  }
+}
+
+.navbar {
+  transition: all 0.6s;
+  border-bottom: none;
+
+  font-weight: 400;
+
+  &:not(.navbar-dark) {
+    padding-top: 0 !important;
+    padding-bottom: 0.4rem !important;
+
+    .navbar-brand {
+      color: rgba(#0b1011, 0.9);
+
+      &:hover {
+        color: #0b1011;
+      }
+    }
+
+    .nav-link {
+      color: rgba(#0b1011, 0.6) !important;
+
+      &:hover {
+        color: rgba(#0b1011, 0.8) !important;
+      }
+
+      &.active {
+        color: #0b1011 !important;
+      }
+    }
+  }
+
+  &.navbar-dark {
+    .navbar-brand {
+      color: rgba(#fff, 0.9);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .nav-link {
+      color: rgba(#fff, 0.6) !important;
+
+      &:hover {
+        color: rgba(#fff, 0.8) !important;
+      }
+
+      &.active {
+        color: #fff !important;
+      }
     }
   }
 }

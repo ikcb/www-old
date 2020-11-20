@@ -59,8 +59,9 @@ export default function HomePage() {
         bg="transparent"
         variant="dark"
         onSelect={() => $(document.documentElement).removeClass('nav-open')}
+        className="pt-lg-4 pt-3 pb-3"
       >
-        <Container className="mt-lg-5 mt-3">
+        <Container className="mt-2">
           <div className="navbar-translate">
             <Navbar.Brand href="/">
               <Logo className="mr-3 nav-logo" /> IIIT Kota
