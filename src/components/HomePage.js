@@ -26,7 +26,7 @@ export default function HomePage() {
 
       return () => {};
     },
-    300,
+    200,
     [stack]
   );
 

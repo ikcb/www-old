@@ -31,7 +31,7 @@ export default function TitleBrand() {
 
     const handleResize = debounce(
       () => setTitlePositionFromTop(getTitlePositionFromTop()),
-      300
+      200
     );
 
     $(window).on('resize', handleResize);
