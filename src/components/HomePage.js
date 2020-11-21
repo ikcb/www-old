@@ -1,3 +1,5 @@
+import 'assets/styles/_homePage.scss';
+
 import IndexNavbar from 'components/IndexNavbar';
 import SectionAbout from 'components/SectionAbout';
 import SectionEvent from 'components/SectionEvent';
@@ -41,9 +43,7 @@ export default function HomePage() {
           onLeave={() => setStack(stack.slice(0, -1))}
           bottomOffset="50%"
         >
-          <section id={key.toLowerCase()}>
-            {createElement(type, { key: key })}
-          </section>
+          <section id={key.toLowerCase()}>{createElement(type)}</section>
         </Waypoint>
       ))}
     </>

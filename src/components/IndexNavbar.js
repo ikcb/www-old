@@ -5,9 +5,12 @@ import $ from 'jquery';
 import { debounce } from 'lodash';
 import React, { useEffect, useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link, animateScroll as scroll } from 'react-scroll';
+import useWindowDimensions from 'utils/WindowDimensions';
 
 export default function HomePage() {
   const [navbarBrandWidth, setNavbarBrandWidth] = useState(0);
+  const { width } = useWindowDimensions();
 
   useEffect(() => {
     const handleNavbarTranslateOnResize = () =>
@@ -44,6 +47,20 @@ export default function HomePage() {
     };
   }, []);
 
+  const NavLink = props => (
+    <Link
+      activeClass="active"
+      to={props.name.split(' ')[0].toLowerCase()}
+      smooth={true}
+      duration={500}
+      className="nav-link"
+      offset={width < 992 ? -78 : -66}
+      id={`ref${props.name.split(' ')[0]}`}
+    >
+      {props.name}
+    </Link>
+  );
+
   return (
     <>
       <style>
@@ -63,7 +80,7 @@ export default function HomePage() {
       >
         <Container className="mt-2">
           <div className="navbar-translate">
-            <Navbar.Brand href="/">
+            <Navbar.Brand onClick={() => scroll.scrollToTop({ duration: 500 })}>
               <Logo className="mr-3 nav-logo" /> IIIT Kota
               <br className="d-lg-none" /> CodeBase
             </Navbar.Brand>
@@ -83,24 +100,12 @@ export default function HomePage() {
             className="justify-content-end acrylic"
           >
             <Nav>
-              <Nav.Link id="refAbout" href="#about">
-                About
-              </Nav.Link>
-              <Nav.Link id="refEvents" href="#events">
-                Events
-              </Nav.Link>
-              <Nav.Link id="refProjects" href="#projects">
-                Projects
-              </Nav.Link>
-              <Nav.Link id="refMembers" href="#members">
-                Members
-              </Nav.Link>
-              <Nav.Link id="refBlog" href="/blog">
-                Blog
-              </Nav.Link>
-              <Nav.Link id="refContact" href="#contact">
-                Contact Us
-              </Nav.Link>
+              <NavLink name="About" />
+              <NavLink name="Events" />
+              <NavLink name="Projects" />
+              <NavLink name="Members" />
+              <Nav.Link href="/blog">Blog</Nav.Link>
+              <NavLink name="Contact Us" />
             </Nav>
           </Navbar.Collapse>
         </Container>
