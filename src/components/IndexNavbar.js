@@ -32,7 +32,7 @@ export default function HomePage() {
 
     const handleResize = debounce(() => {
       handleNavbarTranslateOnResize();
-    }, 200);
+    }, 300);
 
     handleNavbarTranslateOnResize();
     $(document).on('click', handleClickOutsideNav);

@@ -1,6 +1,7 @@
 import 'assets/styles/_titleBrand.scss';
 
 import $ from 'jquery';
+import { debounce } from 'lodash';
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Jumbotron, Row } from 'react-bootstrap';
 import { Waypoint } from 'react-waypoint';
@@ -27,7 +28,17 @@ export default function TitleBrand() {
 
   useEffect(() => {
     setTitlePositionFromTop(getTitlePositionFromTop());
-    return () => {};
+
+    const handleResize = debounce(
+      () => setTitlePositionFromTop(getTitlePositionFromTop()),
+      300
+    );
+
+    $(window).on('resize', handleResize);
+
+    return () => {
+      $(window).off('resize', handleResize);
+    };
   }, []);
 
   return (

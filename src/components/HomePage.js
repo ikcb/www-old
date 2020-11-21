@@ -3,9 +3,9 @@ import SectionAbout from 'components/SectionAbout';
 import SectionEvent from 'components/SectionEvent';
 import TitleBrand from 'components/TitleBrand';
 import $ from 'jquery';
-import React, { createElement, useEffect, useState } from 'react';
+import React, { createElement, useState } from 'react';
 import { Waypoint } from 'react-waypoint';
-import useWindowDimensions from 'utils/WindowDimensions';
+import { useDebouncedEffect } from 'utils/DebouncedEffect';
 
 export default function HomePage() {
   const Sections = {
@@ -13,39 +13,39 @@ export default function HomePage() {
     Events: SectionEvent
   };
 
-  const { height } = useWindowDimensions();
+  const [stack, setStack] = useState([]);
 
-  const scrollspyOnEnter = key => {
-    if (key) {
-      $(`#ref${key}`).addClass('active');
-      $('.active').not(`#ref${key}`).removeClass('active');
-    } else $('.active').removeClass('active');
-  };
+  useDebouncedEffect(
+    () => {
+      if (stack.length) {
+        let top = stack[stack.length - 1];
 
-  const [ScrollspyOffset, setScrollspyOffset] = useState(0);
+        $(`#ref${top}`).addClass('active');
+        $('.active').not(`#ref${top}`).removeClass('active');
+      } else $('.active').removeClass('active');
 
-  useEffect(() => {
-    setScrollspyOffset(height * 0.3);
-    return () => {};
-  }, [height]);
+      return () => {};
+    },
+    300,
+    [stack]
+  );
 
   return (
     <>
       <IndexNavbar />
-      <Waypoint
-        topOffset={-ScrollspyOffset}
-        onEnter={() => scrollspyOnEnter()}
-      />
       <TitleBrand />
-      {Object.entries(Sections).map(([key, type]) => [
+      {Object.entries(Sections).map(([key, type]) => (
         <Waypoint
           key={`#waypnt${key}`}
-          bottomOffset={ScrollspyOffset}
-          onEnter={() => scrollspyOnEnter(key)}
-          // debug
-        />,
-        createElement(type, { key: key, id: key.toLowerCase() })
-      ])}
+          onEnter={() => setStack([...stack, key])}
+          onLeave={() => setStack(stack.slice(0, -1))}
+          bottomOffset="50%"
+        >
+          <section id={key.toLowerCase()}>
+            {createElement(type, { key: key })}
+          </section>
+        </Waypoint>
+      ))}
     </>
   );
 }
