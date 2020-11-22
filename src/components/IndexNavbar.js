@@ -8,7 +8,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import useWindowDimensions from 'utils/WindowDimensions';
 
-export default function HomePage() {
+export default function IndexNavbar() {
   const [navbarBrandWidth, setNavbarBrandWidth] = useState(0);
   const { width } = useWindowDimensions();
 
@@ -56,6 +56,7 @@ export default function HomePage() {
       className="nav-link"
       offset={width < 992 ? -78 : -66}
       id={`ref${props.name.split(' ')[0]}`}
+      onClick={() => $('button.navbar-toggler').trigger('click')}
     >
       {props.name}
     </Link>

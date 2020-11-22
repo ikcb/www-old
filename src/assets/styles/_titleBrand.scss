@@ -1,40 +1,45 @@
-.bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(../images/bg.webp) no-repeat center center fixed;
-  background-size: cover;
+.title-brand {
+  &.bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url(../images/bg.webp) no-repeat center center fixed;
+    background-size: cover;
 
-  &.title-brand {
     .jumbotron {
       margin-top: 2rem;
+
+      @media (max-width: 321.98px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
   }
-}
 
-.display-0 {
-  font-weight: 500;
-  line-height: 1.2;
+  .display-0 {
+    font-weight: 500;
+    line-height: 1.2;
 
-  $inx: 0.7rem;
+    $inx: 0.7rem;
 
-  @media (max-width: 575.98px) {
-    font-size: calc(1.475rem + 2.7vw + #{$inx});
-  }
+    @media (max-width: 575.98px) {
+      font-size: calc(1.475rem + 2.7vw + #{$inx});
+    }
 
-  @media (max-width: 767.98px) {
-    font-size: calc(1.525rem + 3.3vw + #{$inx});
-  }
+    @media (max-width: 767.98px) {
+      font-size: calc(1.525rem + 3.3vw + #{$inx});
+    }
 
-  @media (max-width: 991.98px) {
-    font-size: calc(1.575rem + 3.9vw + #{$inx});
-  }
+    @media (max-width: 991.98px) {
+      font-size: calc(1.575rem + 3.9vw + #{$inx});
+    }
 
-  @media (max-width: 1199.98px) {
-    font-size: calc(1.625rem + 4.5vw + #{$inx});
-  }
+    @media (max-width: 1199.98px) {
+      font-size: calc(1.625rem + 4.5vw + #{$inx});
+    }
 
-  font-size: calc(5rem + #{$inx});
+    font-size: calc(5rem + #{$inx});
 
-  + .lead {
-    font-size: calc(1rem + #{$inx});
+    + .lead {
+      font-size: calc(1rem + #{$inx});
+    }
   }
 }

@@ -211,8 +211,7 @@ button:not(.collapsed) {
     padding-left: 1rem;
     padding-top: 1.25rem;
     height: 100vh;
-    background: rgba(#000, 0.7);
-    // backdrop-filter: blur(10px);
+    background: rgba(#000606, 1);
 
     &.collapsing {
       right: -100%;
@@ -223,7 +222,7 @@ button:not(.collapsed) {
 
     &.show {
       margin-right: 100%;
-      transition: all 0.2s ease;
+      transition: margin-right 0.2s ease;
       opacity: 1;
     }
   }
@@ -248,14 +247,28 @@ button:not(.collapsed) {
     }
 
     .nav-link {
-      color: rgba(#0b1011, 0.6) !important;
+      color: rgba(#fff, 0.6);
 
       &:hover {
-        color: rgba(#0b1011, 0.8) !important;
+        color: rgba(#fff, 0.8);
       }
 
       &.active {
-        color: #0b1011 !important;
+        color: #fff;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .nav-link {
+        color: rgba(#0b1011, 0.6) !important;
+
+        &:hover {
+          color: rgba(#0b1011, 0.8) !important;
+        }
+
+        &.active {
+          color: #0b1011 !important;
+        }
       }
     }
   }
@@ -279,6 +292,16 @@ button:not(.collapsed) {
       &.active {
         color: #fff !important;
       }
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .nav-link {
+      padding-bottom: 0.7rem;
+    }
+    .navbar-nav {
+      padding-top: 2rem;
+      padding-left: 2rem;
     }
   }
 }
