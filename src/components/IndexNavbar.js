@@ -56,7 +56,10 @@ export default function IndexNavbar() {
       className="nav-link"
       offset={width < 992 ? -78 : -66}
       id={`ref${props.name.split(' ')[0]}`}
-      onClick={() => $('button.navbar-toggler').trigger('click')}
+      onClick={() => {
+        if ($('#responsive-navbar-nav').hasClass('show'))
+          $('button.navbar-toggler').trigger('click');
+      }}
     >
       {props.name}
     </Link>
