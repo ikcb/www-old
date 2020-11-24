@@ -47,23 +47,34 @@ export default function IndexNavbar() {
     };
   }, []);
 
+  const handleLinkOnClick = () => {
+    if ($('#responsive-navbar-nav').hasClass('show'))
+      $('button.navbar-toggler').trigger('click');
+  };
+
   const NavLink = props => (
-    <Link
-      activeClass="active"
-      to={props.name.split(' ')[0].toLowerCase()}
-      smooth={true}
-      duration={500}
-      className="nav-link"
-      offset={width < 992 ? -78 : -66}
-      id={`ref${props.name.split(' ')[0]}`}
-      onClick={() => {
-        if ($('#responsive-navbar-nav').hasClass('show'))
-          $('button.navbar-toggler').trigger('click');
-      }}
-    >
-      {props.name}
-    </Link>
+    <li>
+      <Link
+        activeClass="active"
+        to={props.name.split(' ')[0].toLowerCase()}
+        smooth={true}
+        duration={500}
+        className="nav-link"
+        offset={width < 992 ? -78 : -66}
+        id={`ref${props.name.split(' ')[0]}`}
+        onClick={handleLinkOnClick}
+        spy={true}
+      >
+        {props.name}
+      </Link>
+    </li>
   );
+
+  const handleNavbarOnSelect = () =>
+    $(document.documentElement).removeClass('nav-open');
+  const scrollToTop = () => scroll.scrollToTop({ duration: 500 });
+  const toggleNavbar = () =>
+    $(document.documentElement).toggleClass('nav-open');
 
   return (
     <>
@@ -79,20 +90,18 @@ export default function IndexNavbar() {
         fixed="top"
         bg="transparent"
         variant="dark"
-        onSelect={() => $(document.documentElement).removeClass('nav-open')}
+        onSelect={handleNavbarOnSelect}
         className="pt-lg-4 pt-3 pb-3"
       >
         <Container className="mt-2">
           <div className="navbar-translate">
-            <Navbar.Brand onClick={() => scroll.scrollToTop({ duration: 500 })}>
+            <Navbar.Brand onClick={scrollToTop}>
               <Logo className="mr-3 nav-logo" /> IIIT Kota
               <br className="d-lg-none" /> CodeBase
             </Navbar.Brand>
             <Navbar.Toggle
               aria-controls="responsive-navbar-nav"
-              onClick={() =>
-                $(document.documentElement).toggleClass('nav-open')
-              }
+              onClick={toggleNavbar}
             >
               <span className="navbar-toggler-bar bar1" />
               <span className="navbar-toggler-bar bar2" />
@@ -103,12 +112,14 @@ export default function IndexNavbar() {
             id="responsive-navbar-nav"
             className="justify-content-end acrylic"
           >
-            <Nav>
+            <Nav as="ul">
               <NavLink name="About" />
               <NavLink name="Events" />
               <NavLink name="Projects" />
               <NavLink name="Members" />
-              <Nav.Link href="/blog">Blog</Nav.Link>
+              <li>
+                <Nav.Link href="/blog">Blog</Nav.Link>
+              </li>
               <NavLink name="Contact Us" />
             </Nav>
           </Navbar.Collapse>

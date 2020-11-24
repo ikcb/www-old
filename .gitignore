@@ -28,3 +28,6 @@ yarn-error.log*
 
 # environment config
 .env
+
+# cache files
+.eslintcache

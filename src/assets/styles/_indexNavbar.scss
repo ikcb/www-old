@@ -84,16 +84,17 @@
 
     .navbar-brand {
       font-weight: 500;
-      font-size: 1.25rem;
+      font-size: 1.25em;
       text-transform: uppercase;
       outline: none;
+      cursor: pointer;
 
       .nav-logo {
-        height: 3rem;
+        height: 3em;
 
         @media (max-width: 991.98px) {
           float: left;
-          margin-top: 0.3125rem;
+          margin-top: 0.3125em;
         }
       }
     }
@@ -105,7 +106,7 @@
   }
 
   .nav-link {
-    font-size: 1.125rem;
+    font-size: 1.125em;
     outline: none;
   }
 
@@ -208,8 +209,8 @@ button:not(.collapsed) {
     transition: all 0.4s ease;
     display: block;
     opacity: 0.8;
-    padding-left: 1rem;
-    padding-top: 1.25rem;
+    padding-left: 1em;
+    padding-top: 1.25em;
     height: 100vh;
     background: rgba(#000606, 1);
 
@@ -236,13 +237,13 @@ button:not(.collapsed) {
 
   &:not(.navbar-dark) {
     padding-top: 0 !important;
-    padding-bottom: 0.4rem !important;
+    padding-bottom: 0.4em !important;
 
     .navbar-brand {
-      color: rgba(#0b1011, 0.9);
+      color: rgba(#323b3c, 0.9);
 
       &:hover {
-        color: #0b1011;
+        color: #323b3c;
       }
     }
 
@@ -260,14 +261,14 @@ button:not(.collapsed) {
 
     @media (min-width: 992px) {
       .nav-link {
-        color: rgba(#0b1011, 0.6) !important;
+        color: rgba(#323b3c, 0.6) !important;
 
         &:hover {
-          color: rgba(#0b1011, 0.8) !important;
+          color: rgba(#323b3c, 0.8) !important;
         }
 
         &.active {
-          color: #0b1011 !important;
+          color: #323b3c !important;
         }
       }
     }
@@ -297,11 +298,84 @@ button:not(.collapsed) {
 
   @media (max-width: 991.98px) {
     .nav-link {
-      padding-bottom: 0.7rem;
+      padding-bottom: 0.7em;
     }
     .navbar-nav {
-      padding-top: 2rem;
-      padding-left: 2rem;
+      padding-top: 2em;
+      padding-left: 2em;
+    }
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+.navbar-nav {
+  font-family: 'Raleway', Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+
+  @media (min-width: 992px) {
+    text-align: center;
+
+    * {
+      box-sizing: border-box;
+      transition: all 0.2s ease;
+    }
+
+    li {
+      display: inline-block;
+      list-style: outside none none;
+      margin: 0;
+      padding: 0 0.4em;
+      cursor: pointer;
+    }
+
+    a {
+      padding: 0.5em 0.8em;
+      margin: 0.2em 0;
+      display: block;
+      color: rgba(255, 255, 255, 0.5);
+      position: relative;
+      text-decoration: none;
+
+      &:before,
+      &:after {
+        height: 14px;
+        width: 14px;
+        position: absolute;
+        content: '';
+        transition: all 0.2s ease 0.3s;
+        opacity: 0;
+      }
+
+      &:before {
+        left: 0;
+        top: 0;
+        border-left: 3px solid #04b4cb;
+        border-top: 3px solid #04b4cb;
+        transform: translate(100%, 50%);
+      }
+
+      &:after {
+        right: 0;
+        bottom: 0;
+        border-right: 3px solid #0a7fa0;
+        border-bottom: 3px solid #0a7fa0;
+        transform: translate(-100%, -50%);
+      }
+
+      &:hover,
+      &.active {
+        color: #ffffff;
+      }
+
+      &.active:before,
+      &.active:after {
+        transform: translate(0%, 0%);
+        opacity: 1;
+      }
     }
   }
 }
