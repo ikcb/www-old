@@ -4,10 +4,7 @@ import IndexNavbar from 'components/IndexNavbar';
 import SectionAbout from 'components/SectionAbout';
 import SectionEvent from 'components/SectionEvent';
 import TitleBrand from 'components/TitleBrand';
-import $ from 'jquery';
-import { debounce } from 'lodash';
-import React, { createElement, useEffect, useRef, useState } from 'react';
-import { Waypoint } from 'react-waypoint';
+import React, { createElement } from 'react';
 
 export default function HomePage() {
   const Sections = {
