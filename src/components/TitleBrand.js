@@ -62,7 +62,7 @@ export default function TitleBrand() {
                 onLeave={handleNavbarOnLeave}
                 topOffset={TitlePositionFromTop}
               >
-                <h1 className="display-0">IIIT Kota CodeBase</h1>
+                <h1 className="display-0 mt-4">IIIT Kota CodeBase</h1>
               </Waypoint>
               <h2 className="lead mt-4">
                 The Free and Open Source Society of IIIT Kota
