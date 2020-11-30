@@ -75,7 +75,7 @@ export default function TitleBrand() {
               >
                 <Button
                   className="mt-5 mr-sm-3 rounded-0"
-                  variant="outline-light"
+                  variant="outline-light-X"
                   size="lg"
                   id="btn-1"
                 >
@@ -85,7 +85,7 @@ export default function TitleBrand() {
               <br className="d-sm-none" />
               <Button
                 className="mt-3 mt-sm-5 ml-sm-3 rounded-0"
-                variant="outline-light"
+                variant="outline-light-X"
                 size="lg"
                 id="btn-2"
               >

@@ -1,3 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
 section#about {
   background-color: #000303;
+
+  .container,
+  .row {
+    min-height: inherit;
+  }
+
+  .lead {
+    font-family: 'Comfortaa', sans-serif;
+  }
+
+  br {
+    display: block;
+    content: '';
+    margin-top: 1em;
+  }
+
+  .display-0 {
+    font-weight: 300;
+
+    $inx: 0.7em;
+
+    @media (max-width: 575.98px) {
+      font-size: calc(1.475em + 2.7vw + #{$inx});
+    }
+
+    @media (max-width: 767.98px) {
+      font-size: calc(1.525em + 3.3vw + #{$inx});
+    }
+
+    @media (max-width: 991.98px) {
+      font-size: calc(1.575em + 3.9vw + #{$inx});
+    }
+
+    @media (max-width: 1199.98px) {
+      font-size: calc(1.625em + 4.5vw + #{$inx});
+    }
+
+    font-size: calc(5em + #{$inx});
+  }
 }

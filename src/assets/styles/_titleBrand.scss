@@ -62,11 +62,35 @@
     }
   }
 
-  .btn {
+  .btn-outline-light-X {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
     transition: all 500ms ease-in-out;
 
-    &:not(:hover):not(:focus):not(active) {
+    &:not(:hover):not(:focus):not(:active) {
       background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: #212529;
+        background-color: #f8f9fa;
+        border-color: #f8f9fa;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+    }
+
+    &:active {
+      color: #212529;
+      background-color: #f8f9fa;
+      border-color: #f8f9fa;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+      }
     }
   }
 }
