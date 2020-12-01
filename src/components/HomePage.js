@@ -2,7 +2,6 @@ import 'assets/styles/_homePage.scss';
 
 import IndexNavbar from 'components/IndexNavbar';
 import SectionAbout from 'components/SectionAbout';
-import SectionEvent from 'components/SectionEvent';
 import TitleBrand from 'components/TitleBrand';
 import $ from 'jquery';
 import { debounce } from 'lodash';
@@ -16,7 +15,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const setViewportHeight = () => {
-      let vh = window.innerHeight * 0.01;
+      const vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
 

@@ -7,7 +7,7 @@
 
 @keyframes topbar-x {
   0% {
-    top: 0px;
+    top: 0;
     transform: rotate(0deg);
   }
   45% {
@@ -34,14 +34,14 @@
     transform: rotate(5deg);
   }
   100% {
-    top: 0px;
+    top: 0;
     transform: rotate(0);
   }
 }
 
 @keyframes bottombar-x {
   0% {
-    bottom: 0px;
+    bottom: 0;
     transform: rotate(0deg);
   }
   45% {
@@ -68,7 +68,7 @@
     transform: rotate(-5deg);
   }
   100% {
-    bottom: 0px;
+    bottom: 0;
     transform: rotate(0);
   }
 }
@@ -76,17 +76,17 @@
 .navbar-toggler,
 .navbar-toggler:active,
 .navbar-toggler:focus {
-  border: none;
+  border: 0;
   outline: none;
 }
 
 .navbar-toggler-bar {
+  border-radius: 1px;
   display: block;
+  height: 2px;
+  margin: 0 auto;
   position: relative;
   width: 24px;
-  height: 2px;
-  border-radius: 1px;
-  margin: 0 auto;
 
   .navbar-light &,
   .navbar-dark & {
@@ -112,8 +112,8 @@
   }
 
   &.bar1 {
-    top: 0px;
     @include bar-animation(topbar-back);
+    top: 0;
   }
 
   &.bar2 {
@@ -121,14 +121,14 @@
   }
 
   &.bar3 {
-    bottom: 0px;
     @include bar-animation(bottombar-back);
+    bottom: 0;
   }
 
   button:not(.collapsed) & {
     &.bar1 {
-      top: 6px;
       @include bar-animation(topbar-x);
+      top: 6px;
     }
 
     &.bar2 {
@@ -136,8 +136,8 @@
     }
 
     &.bar3 {
-      bottom: 6px;
       @include bar-animation(bottombar-x);
+      bottom: 6px;
     }
   }
 }
@@ -145,11 +145,11 @@
 // styles for .navbar-brand
 
 .navbar-brand {
-  font-weight: 500;
-  font-size: 1.25em;
-  text-transform: uppercase;
-  outline: none;
   cursor: pointer;
+  font-size: 1.25em;
+  font-weight: 500;
+  outline: none;
+  text-transform: uppercase;
 
   .navbar-light &,
   .navbar-dark & {
@@ -181,14 +181,14 @@
 
 // styles for .navbar-nav
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
 
 .navbar-nav {
   font-family: 'Raleway', Arial, sans-serif;
-  text-transform: uppercase;
+  font-size: 0.9em;
   font-weight: 500;
   letter-spacing: 1px;
-  font-size: 0.9em;
+  text-transform: uppercase;
 
   @media (min-width: 992px) {
     text-align: center;
@@ -199,56 +199,56 @@
     }
 
     li {
+      cursor: pointer;
       display: inline-block;
       list-style: outside none none;
       margin: 0;
       padding: 0 0.4em;
-      cursor: pointer;
     }
 
     a {
-      padding: 0.5em 0.8em;
-      margin: 0.2em 0;
-      display: block;
       color: rgba(255, 255, 255, 0.5);
+      display: block;
+      margin: 0.2em 0;
+      padding: 0.5em 0.8em;
       position: relative;
       text-decoration: none;
 
-      &:before,
-      &:after {
-        height: 14px;
-        width: 14px;
-        position: absolute;
+      &::before,
+      &::after {
         content: '';
-        transition: all 0.2s ease 0.3s;
+        height: 14px;
         opacity: 0;
+        position: absolute;
+        transition: all 0.2s ease 0.3s;
+        width: 14px;
       }
 
-      &:before {
-        left: 0;
-        top: 0;
+      &::before {
         border-left: 3px solid #04b4cb;
         border-top: 3px solid #04b4cb;
+        left: 0;
+        top: 0;
         transform: translate(100%, 50%);
       }
 
-      &:after {
-        right: 0;
-        bottom: 0;
-        border-right: 3px solid #0a7fa0;
+      &::after {
         border-bottom: 3px solid #0a7fa0;
+        border-right: 3px solid #0a7fa0;
+        bottom: 0;
+        right: 0;
         transform: translate(-100%, -50%);
       }
 
       &:hover,
       &.active {
-        color: #ffffff;
+        color: #fff;
       }
 
-      &.active:before,
-      &.active:after {
-        transform: translate(0%, 0%);
+      &.active::before,
+      &.active::after {
         opacity: 1;
+        transform: translate(0%, 0%);
       }
     }
   }
@@ -271,28 +271,28 @@
 
 .navbar-collapse {
   @media (max-width: 991.98px) {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    transition: all 0.4s ease;
+    background: rgba(#000606, 1);
     display: block;
+    height: 100vh;
     opacity: 0.8;
     padding-left: 1em;
     padding-top: 1.25em;
-    height: 100vh;
-    background: rgba(#000606, 1);
+    position: fixed;
+    right: -100%;
+    top: 0;
+    transition: all 0.4s ease;
 
     &.collapsing {
-      right: -100%;
       margin-right: 1px;
-      transition: all 0.2s ease;
       opacity: 0.9;
+      right: -100%;
+      transition: all 0.2s ease;
     }
 
     &.show {
       margin-right: 100%;
-      transition: margin-right 0.2s ease;
       opacity: 1;
+      transition: margin-right 0.2s ease;
     }
   }
 }
@@ -303,19 +303,19 @@
   transition: all 0.6s, right 0s;
 }
 
-.navbar-dark:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
+.navbar-dark::after {
   background: rgba(#000303, 0.7);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 
   @supports (backdrop-filter: blur(24px)) {
-    background: rgba(#000303, 0.3);
     backdrop-filter: blur(24px);
+    background: rgba(#000303, 0.3);
     @media (max-width: 991.98px) {
       backdrop-filter: blur(6px);
     }
@@ -323,8 +323,8 @@
 }
 
 .navbar-light {
-  padding-top: 0 !important;
   padding-bottom: 0.4em !important;
+  padding-top: 0 !important;
 
   @media (max-width: 991.98px) {
     margin-top: -0.4em;
@@ -336,8 +336,8 @@
 
 @media (max-width: 991.98px) {
   .nav-link {
-    padding-bottom: 0.7em;
     color: rgba(#fff, 0.5) !important;
+    padding-bottom: 0.7em;
 
     &:hover,
     &:focus {
@@ -350,8 +350,8 @@
   }
 
   .navbar-nav {
-    padding-top: 2em;
     padding-left: 2em;
+    padding-top: 2em;
   }
 }
 
@@ -387,8 +387,8 @@
 
 .modal-open .fixed-top {
   @media (min-width: 992px) {
-    right: 1rem !important;
     padding-right: 1rem !important;
+    right: 1rem !important;
   }
 }
 

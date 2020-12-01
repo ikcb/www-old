@@ -10,7 +10,7 @@ ReactDOM.render(
   <Router>
     <Switch>
       <Route exact path="/" component={UnderConstruction} />
-      <Route path="/beta" component={HomePage}></Route>
+      <Route path="/beta" component={HomePage} />
     </Switch>
   </Router>,
   document.getElementById('root')

@@ -56,13 +56,13 @@ export default function IndexNavbar() {
       <Link
         activeClass="active"
         to={props.name.split(' ')[0].toLowerCase()}
-        smooth={true}
+        smooth
         duration={500}
         className="nav-link"
         offset={width < 992 ? -78 : -66}
         id={`ref${props.name.split(' ')[0]}`}
         onClick={handleLinkOnClick}
-        spy={true}
+        spy
       >
         {props.name}
       </Link>

@@ -69,13 +69,13 @@ export default function TitleBrand() {
               </h2>
               <Link
                 to="about"
-                smooth={true}
+                smooth
                 duration={500}
                 offset={width < 992 ? -78 : -66}
               >
                 <Button
                   className="mt-5 mr-sm-3 rounded-0"
-                  variant="outline-light-X"
+                  variant="outline-light-x"
                   size="lg"
                   id="btn-1"
                 >
@@ -85,7 +85,7 @@ export default function TitleBrand() {
               <br className="d-sm-none" />
               <Button
                 className="mt-3 mt-sm-5 ml-sm-3 rounded-0"
-                variant="outline-light-X"
+                variant="outline-light-x"
                 size="lg"
                 id="btn-2"
               >

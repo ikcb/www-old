@@ -24,7 +24,7 @@ export default function UnderConstruction() {
           Please forgive the inconvenience. <br />
           We are currently initializing our brand new site.
         </p>
-        <p className="lead">It's okay, we're excited too!</p>
+        <p className="lead">It&apos;s okay, we&apos;re excited too!</p>
       </div>
     </div>
   );

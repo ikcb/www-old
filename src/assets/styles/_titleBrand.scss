@@ -6,7 +6,7 @@
         rgba(0, 0, 0, 0) 55%,
         rgba(0, 0, 0, 1) 100%
       ),
-      url(../images/bg.webp) no-repeat center center;
+      url('../images/bg.webp') no-repeat center center;
     background-size: cover;
 
     .jumbotron {
@@ -20,10 +20,16 @@
   }
 
   .display-0 {
+
+    $inx: 0.7em;
+
+    font-size: calc(5em + #{$inx});
     font-weight: 400;
     line-height: 1;
 
-    $inx: 0.7em;
+    + .lead {
+      font-size: calc(1em + #{$inx});
+    }
 
     @media (max-width: 575.98px) {
       font-size: calc(1.475em + 2.7vw + #{$inx});
@@ -39,12 +45,6 @@
 
     @media (max-width: 1199.98px) {
       font-size: calc(1.625em + 4.5vw + #{$inx});
-    }
-
-    font-size: calc(5em + #{$inx});
-
-    + .lead {
-      font-size: calc(1em + #{$inx});
     }
   }
 
@@ -62,9 +62,9 @@
     }
   }
 
-  .btn-outline-light-X {
-    color: #f8f9fa;
+  .btn-outline-light-x {
     border-color: #f8f9fa;
+    color: #f8f9fa;
     transition: all 500ms ease-in-out;
 
     &:not(:hover):not(:focus):not(:active) {
@@ -73,9 +73,9 @@
 
     @media (hover: hover) and (pointer: fine) {
       &:hover {
-        color: #212529;
         background-color: #f8f9fa;
         border-color: #f8f9fa;
+        color: #212529;
       }
     }
 
@@ -84,9 +84,9 @@
     }
 
     &:active {
-      color: #212529;
       background-color: #f8f9fa;
       border-color: #f8f9fa;
+      color: #212529;
 
       &:focus {
         box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
