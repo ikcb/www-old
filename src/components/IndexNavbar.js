@@ -1,6 +1,7 @@
 import 'assets/styles/_indexNavbar.scss';
 
 import { ReactComponent as Logo } from 'assets/images/logo.svg';
+import EventsNavLink from 'components/EventsSuspendedModal';
 import $ from 'jquery';
 import { debounce } from 'lodash';
 import React, { useEffect, useState } from 'react';
@@ -112,7 +113,8 @@ export default function IndexNavbar() {
           >
             <Nav as="ul">
               <NavLink name="About" />
-              <NavLink name="Events" />
+              {/* <NavLink name="Events" /> */}
+              <EventsNavLink />
               <NavLink name="Projects" />
               <NavLink name="Members" />
               <li>

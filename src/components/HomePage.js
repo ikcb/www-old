@@ -10,8 +10,8 @@ import React, { createElement, useEffect } from 'react';
 
 export default function HomePage() {
   const Sections = {
-    About: SectionAbout,
-    Events: SectionEvent
+    About: SectionAbout
+    // Events: SectionEvent
   };
 
   useEffect(() => {
