@@ -33,9 +33,7 @@ export default function IndexNavbar() {
         $('button.navbar-toggler').trigger('click');
     };
 
-    const handleResize = debounce(() => {
-      handleNavbarTranslateOnResize();
-    }, 200);
+    const handleResize = debounce(handleNavbarTranslateOnResize, 200);
 
     handleNavbarTranslateOnResize();
     $(document).on('click', handleClickOutsideNav);

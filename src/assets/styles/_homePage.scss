@@ -1,6 +1,9 @@
 section {
   min-height: calc(100vh - 66px);
+  min-height: calc(var(--vh, 1vh) * 100 - 66px);
+
   @media (max-width: 991.98px) {
     min-height: calc(100vh - 78px);
+    min-height: calc(var(--vh, 1vh) * 100 - 78px);
   }
 }

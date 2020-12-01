@@ -1,29 +1,64 @@
 import 'assets/styles/_sectionAbout.scss';
 
 import { ReactComponent as Illustration } from 'assets/images/undraw_code_typing_7jnv.svg';
-import React from 'react';
+import $ from 'jquery';
+import { debounce } from 'lodash';
+import React, { useEffect, useState } from 'react';
 import { Col, Container, Jumbotron, Row } from 'react-bootstrap';
 
 export default function SectionAbout() {
+  const [displayIllustration, setDisplayIllustration] = useState(true);
+
+  useEffect(() => {
+    const handleIllustration = () => {
+      let state = true;
+      if (window.innerWidth < 992)
+        if (
+          window.innerHeight > $('#about-col-1').height() &&
+          $('#about-col-1').innerHeight() >
+            window.innerHeight -
+              (826.3 / 1088) * (window.innerWidth * 0.75) -
+              78
+        )
+          state = false;
+
+      if (state !== $('#about-col-2').is(':visible'))
+        setDisplayIllustration(state);
+    };
+
+    handleIllustration();
+    const handleResize = debounce(handleIllustration, 200);
+    $(window).on('resize', handleResize);
+
+    return () => {
+      $(window).off('resize', handleResize);
+    };
+  }, []);
+
   return (
     <Container className="section-about">
       <Row className="align-content-center">
-        <Col lg={7}>
+        <Col lg={7} id="about-col-1">
           <Jumbotron className="bg-transparent text-light m-0">
             <h1 className="display-0 text-center text-lg-left">About Us</h1>
-            <p className="lead mt-5">
-              IIIT Kota CodeBase is an organisation formed and run by the
-              students of IIIT Kota with the purpose to promote the spirit of
-              open source development and maintain good coding culture in the
-              institute. <br /> We actively work together and collaborate to
-              build awesome open source projects. In the course, we explore our
-              technological interests and learn practical coding skills by
-              sharing our knowledge and expertise.
+            <p className="lead mt-5 pb-lg-5 w-lg-90">
+              IIIT Kota CodeBase is a community formed by the students of IIIT
+              Kota to promote open source development in the institute and
+              hence, maintain a good coding culture. <br /> We, at CodeBase,
+              explore our technical interests, and enhance our practical coding
+              skills by actively working together to build awesome free and open
+              source projects.
             </p>
           </Jumbotron>
         </Col>
-        <Col lg={5} className="d-none d-lg-block">
-          <Illustration className="w-100 h-100" />
+        <Col
+          lg={5}
+          className={`text-center ${
+            displayIllustration ? 'd-block' : 'd-none'
+          }`}
+          id="about-col-2"
+        >
+          <Illustration className="w-75 w-lg-100 h-100 pb-5" />
         </Col>
       </Row>
     </Container>

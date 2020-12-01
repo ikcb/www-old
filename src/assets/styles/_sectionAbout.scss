@@ -10,6 +10,11 @@ section#about {
 
   .lead {
     font-family: 'Comfortaa', sans-serif;
+    font-size: 1.2em;
+
+    @media (max-width: 575.98px) {
+      font-size: 1em;
+    }
   }
 
   br {
@@ -40,5 +45,17 @@ section#about {
     }
 
     font-size: calc(5em + #{$inx});
+  }
+}
+
+.w-lg-100 {
+  @media (min-width: 992px) {
+    width: 100% !important;
+  }
+}
+
+.w-lg-90 {
+  @media (min-width: 992px) {
+    width: 90% !important;
   }
 }
