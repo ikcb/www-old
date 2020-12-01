@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 
-.section-about {
+#about {
   background-color: #000303;
 
   .container,
@@ -24,7 +24,6 @@
   }
 
   .display-0 {
-
     $inx: 0.7em;
 
     font-size: calc(5em + #{$inx});
