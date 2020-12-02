@@ -113,12 +113,29 @@ export default function IndexNavbar() {
           >
             <Nav as="ul">
               <NavLink name="About" />
-              {/* <NavLink name="Events" /> */}
               <EventsNavLink />
-              <NavLink name="Projects" />
+              <li>
+                <a
+                  href="https://github.com/iiitkota-codebase"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="nav-link"
+                  onClick={e => $(e.target).trigger('blur')}
+                >
+                  Projects
+                </a>
+              </li>
               <NavLink name="Members" />
               <li>
-                <Nav.Link href="/blog">Blog</Nav.Link>
+                <a
+                  href="https://medium.com/iiitkota-codebase"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="nav-link"
+                  onClick={e => $(e.target).trigger('blur')}
+                >
+                  Blog
+                </a>
               </li>
               <NavLink name="Contact Us" />
             </Nav>
