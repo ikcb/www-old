@@ -7,6 +7,8 @@ import $ from 'jquery';
 import { debounce } from 'lodash';
 import React, { createElement, useEffect } from 'react';
 
+import Team from './Team';
+
 export default function HomePage() {
   const Sections = {
     About: SectionAbout
@@ -36,6 +38,7 @@ export default function HomePage() {
           {createElement(type)}
         </section>
       ))}
+      <Team />
     </>
   );
 }
