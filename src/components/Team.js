@@ -18,7 +18,7 @@ function Team() {
     {
       key: '2',
       name: 'Vaibhav Jain',
-      role: 'Flutter Development Lead',
+      role: 'App Development Lead',
       github: 'https://github.com/pc-beast',
       email: '2019kucp1088@iiitkota.ac.in',
       linkedin: 'https://github.com/vaibhav-jain18'
@@ -53,7 +53,7 @@ function Team() {
     {
       key: '2',
       name: 'Vipin Tripathi',
-      role: 'Web Developer',
+      role: 'UI/UX Designer',
       github: 'https://github.com/VIPIN-creator',
       email: '2019kucp1053@iiitkota.ac.in',
       linkedin: 'https://www.linkedin.com/in/vipin-tripathi-13a9a8190/'
