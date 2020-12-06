@@ -1,5 +1,8 @@
-import React from 'react';
+import $ from 'jquery';
+import { debounce } from 'lodash';
+import React, { useEffect } from 'react';
 import { Modal, Nav } from 'react-bootstrap';
+import getScrollbarWidth from 'utils/ScrollbarWidth';
 
 function EventsSuspendedModal(props) {
   return (
@@ -27,6 +30,22 @@ function EventsSuspendedModal(props) {
 
 export default function EventsNavLink() {
   const [modalShow, setModalShow] = React.useState(false);
+
+  useEffect(() => {
+    const setScrollbarWidth = () =>
+      document.documentElement.style.setProperty(
+        '--scrollbar-width',
+        `${getScrollbarWidth()}px`
+      );
+
+    setScrollbarWidth();
+    const handleResize = debounce(setScrollbarWidth, 200);
+    $(window).on('resize', handleResize);
+
+    return () => {
+      $(window).off('resize', handleResize);
+    };
+  }, []);
 
   return (
     <>

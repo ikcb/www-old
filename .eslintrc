@@ -1,5 +1,7 @@
 {
   "rules": {
+    "func-names": 0,
+    "no-alert": 0,
     "react/jsx-filename-extension": 0,
     "react/jsx-props-no-spreading": 0,
     "react/destructuring-assignment": 0,

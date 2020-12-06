@@ -19,8 +19,13 @@
     }
   }
 
-  .display-0 {
+  .col-lg-7 {
+    @media (max-width: 320px) {
+      padding: 0 !important;
+    }
+  }
 
+  .display-0 {
     $inx: 0.7em;
 
     font-size: calc(5em + #{$inx});

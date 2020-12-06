@@ -1,5 +1,6 @@
 import 'assets/styles/_titleBrand.scss';
 
+// import ExamplePopup from 'components/ExamplePopup';
 import $ from 'jquery';
 import { debounce } from 'lodash';
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
@@ -83,14 +84,21 @@ export default function TitleBrand() {
                 </Button>
               </Link>
               <br className="d-sm-none" />
-              <Button
-                className="mt-3 mt-sm-5 ml-sm-3 rounded-0"
-                variant="outline-light-x"
-                size="lg"
-                id="btn-2"
+              <Link
+                to="contact"
+                smooth
+                duration={500}
+                offset={width < 992 ? -78 : -66}
               >
-                Join the Team
-              </Button>
+                <Button
+                  className="mt-3 mt-sm-5 ml-sm-3 rounded-0"
+                  variant="outline-light-x"
+                  size="lg"
+                  id="btn-2"
+                >
+                  Join the Team
+                </Button>
+              </Link>
             </Jumbotron>
           </Col>
         </Row>

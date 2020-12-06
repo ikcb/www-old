@@ -181,8 +181,6 @@
 
 // styles for .navbar-nav
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
-
 .navbar-nav {
   font-family: 'Raleway', Arial, sans-serif;
   font-size: 0.9em;
@@ -243,6 +241,10 @@
       &:hover,
       &.active {
         color: #fff;
+      }
+
+      &.active {
+        transition-delay: 0.3s;
       }
 
       &.active::before,
@@ -386,10 +388,8 @@
 }
 
 .modal-open .fixed-top {
-  @media (min-width: 992px) {
-    padding-right: 1rem !important;
-    right: 1rem !important;
-  }
+  padding-right: 1rem !important;
+  right: var(--scrollbar-width) !important;
 }
 
 button:focus {
@@ -398,4 +398,8 @@ button:focus {
 
 :focus {
   outline: 0;
+}
+
+.navbar-toggler.collapsed {
+  margin-right: 0 !important;
 }
