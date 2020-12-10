@@ -1,3 +1,5 @@
+$inx: 0.7em;
+
 .title-brand {
   &.bg {
     background: linear-gradient(
@@ -26,30 +28,11 @@
   }
 
   .display-0 {
-    $inx: 0.7em;
-
-    font-size: calc(5em + #{$inx});
     font-weight: 400;
     line-height: 1;
 
     + .lead {
       font-size: calc(1em + #{$inx});
-    }
-
-    @media (max-width: 575.98px) {
-      font-size: calc(1.475em + 2.7vw + #{$inx});
-    }
-
-    @media (max-width: 767.98px) {
-      font-size: calc(1.525em + 3.3vw + #{$inx});
-    }
-
-    @media (max-width: 991.98px) {
-      font-size: calc(1.575em + 3.9vw + #{$inx});
-    }
-
-    @media (max-width: 1199.98px) {
-      font-size: calc(1.625em + 4.5vw + #{$inx});
     }
   }
 
@@ -97,5 +80,25 @@
         box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
       }
     }
+  }
+}
+
+.display-0 {
+  font-size: calc(5em + #{$inx});
+
+  @media (max-width: 575.98px) {
+    font-size: calc(1.475em + 2.7vw + #{$inx});
+  }
+
+  @media (max-width: 767.98px) {
+    font-size: calc(1.525em + 3.3vw + #{$inx});
+  }
+
+  @media (max-width: 991.98px) {
+    font-size: calc(1.575em + 3.9vw + #{$inx});
+  }
+
+  @media (max-width: 1199.98px) {
+    font-size: calc(1.625em + 4.5vw + #{$inx});
   }
 }

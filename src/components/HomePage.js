@@ -3,16 +3,16 @@ import 'assets/styles/_homePage.scss';
 import IndexNavbar from 'components/IndexNavbar';
 import SectionAbout from 'components/SectionAbout';
 import SectionContact from 'components/SectionContact';
+import SectionMembers from 'components/SectionMembers';
 import TitleBrand from 'components/TitleBrand';
 import $ from 'jquery';
 import { debounce } from 'lodash';
 import React, { createElement, useEffect } from 'react';
 
-import Team from './Team';
-
 export default function HomePage() {
   const Sections = {
     About: SectionAbout,
+    Members: SectionMembers,
     Contact: SectionContact
   };
 
@@ -40,7 +40,6 @@ export default function HomePage() {
           {createElement(type)}
         </section>
       ))}
-      <Team />
     </>
   );
 }

@@ -24,26 +24,7 @@
   }
 
   .display-0 {
-    $inx: 0.7em;
-
-    font-size: calc(5em + #{$inx});
     font-weight: 300;
-
-    @media (max-width: 575.98px) {
-      font-size: calc(1.475em + 2.7vw + #{$inx});
-    }
-
-    @media (max-width: 767.98px) {
-      font-size: calc(1.525em + 3.3vw + #{$inx});
-    }
-
-    @media (max-width: 991.98px) {
-      font-size: calc(1.575em + 3.9vw + #{$inx});
-    }
-
-    @media (max-width: 1199.98px) {
-      font-size: calc(1.625em + 4.5vw + #{$inx});
-    }
   }
 }
 

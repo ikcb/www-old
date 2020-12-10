@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300&display=swap');
+
+#members {
+  background-color: #000303;
+
+  .bg-dark {
+    background-color: #0e1213 !important;
+  }
+
+  .display-0 {
+    font-weight: 300;
+  }
+
+  .react-gravatar {
+    background: #fff;
+    padding: 0.25em;
+  }
+
+  .card {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0 1em;
+    margin-bottom: -5rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.8em;
+  }
+
+  .card-link {
+    color: #fff;
+    font-size: 1.75em;
+  }
+
+  .hover-item {
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: translate(0, -1em);
+      }
+    }
+
+    .card-body {
+      bottom: calc(50px + 1.25rem);
+      position: relative;
+    }
+  }
+}
