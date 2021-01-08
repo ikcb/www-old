@@ -34,19 +34,28 @@ export default function IndexNavbar() {
         $('button.navbar-toggler').trigger('click');
     };
 
-    const handleResize = debounce(handleNavbarTranslateOnResize, 200);
-
     handleNavbarTranslateOnResize();
-    $(document).on('click', handleClickOutsideNav);
+    const handleResize = debounce(handleNavbarTranslateOnResize, 200);
     $(window).on('resize', handleResize);
+    $(document).on('click', handleClickOutsideNav);
 
     return () => {
-      $(document).off('click', handleClickOutsideNav);
       $(window).off('resize', handleResize);
+      $(document).off('click', handleClickOutsideNav);
     };
   }, []);
 
-  const handleLinkOnClick = () => {
+  const handleClass = debounce(e => {
+    const y = $(window).scrollTop();
+    $(window).scrollTop(y + 2);
+
+    $(e.target).addClass('active');
+    $('.nav-link.active').not(e.target).removeClass('active');
+  }, 500);
+
+  const handleLinkOnClick = e => {
+    handleClass(e);
+
     if ($('#responsive-navbar-nav').hasClass('show'))
       $('button.navbar-toggler').trigger('click');
   };
@@ -128,7 +137,7 @@ export default function IndexNavbar() {
               <NavLink name="Members" />
               <li>
                 <a
-                  href="https://medium.com/iiitkota-codebase"
+                  href="https://medium.com/codebase-iiitkota"
                   target="_blank"
                   rel="noreferrer"
                   className="nav-link"

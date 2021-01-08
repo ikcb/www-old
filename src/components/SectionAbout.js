@@ -41,7 +41,7 @@ export default function SectionAbout() {
         <Col lg={7} id="about-col-1">
           <Jumbotron className="bg-transparent text-light m-0">
             <h1 className="display-0 text-center text-lg-left">About Us</h1>
-            <p className="lead mt-5 pb-lg-5 w-lg-90">
+            <p className="lead mt-5 w-lg-90">
               IIIT Kota CodeBase is a community formed by the students of IIIT
               Kota to promote open source development in the institute and
               hence, maintain a good coding culture. <br /> We, at CodeBase,
@@ -58,7 +58,7 @@ export default function SectionAbout() {
           }`}
           id="about-col-2"
         >
-          <Illustration className="w-75 w-lg-100 h-100 pb-5" />
+          <Illustration className="w-75 w-lg-100 h-100 pb-5 pb-lg-0" />
         </Col>
       </Row>
     </Container>
