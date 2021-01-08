@@ -15,7 +15,6 @@ website at [codebase.iiitkota.tech](https://codebase.iiitkota.tech/)
 
 Thanks goes to these wonderful people ✨:
 
-<!-- prettier-ignore-start -->
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -32,7 +31,6 @@ Thanks goes to these wonderful people ✨:
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-<!-- prettier-ignore-end -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors)
 specification. Contributions of any kind are welcome!
