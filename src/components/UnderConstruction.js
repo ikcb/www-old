@@ -1,4 +1,5 @@
 import { ReactComponent as Gear } from 'assets/images/gear.svg';
+import $ from 'jquery';
 import React, { useLayoutEffect, useRef } from 'react';
 import useWindowDimensions from 'utils/WindowDimensions';
 
@@ -12,6 +13,20 @@ export default function UnderConstruction() {
     if (el.current.scrollWidth <= width) el.current.classList.add('vw-100');
     else el.current.classList.remove('vw-100');
   });
+
+  useLayoutEffect(() => {
+    const handleLoader = () => {
+      $('.banner, .loader').fadeOut('fast');
+      $('#root').fadeTo('fast', 1);
+      $('body').attr('style', '');
+    };
+
+    $(window).on('load', handleLoader);
+
+    return () => {
+      $(window).off('load', handleLoader);
+    };
+  }, []);
 
   return (
     <div ref={el} className="jumbotron d-flex align-items-center m-0">

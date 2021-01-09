@@ -27,22 +27,25 @@ export default function HomePage() {
       .not(`a[href*="${window.location.hostname}"]`)
       .attr({ target: '_blank', rel: 'noopener noreferrer' });
 
-    $(window).on('load', () => {
+    const handleLoader = () => {
       let count = 0;
       $('.banner, .loader').fadeOut('slow', () => {
         if (++count === 2)
           $('#root').fadeTo('slow', 1, () => {
-            $('body').attr('style', 'background-color: #fff !important');
+            $('body').attr('style', '');
           });
       });
-    });
+    };
 
     setViewportHeight();
     const handleResize = debounce(setViewportHeight, 200);
     $(window).on('resize', handleResize);
 
+    $(window).on('load', handleLoader);
+
     return () => {
       $(window).off('resize', handleResize);
+      $(window).off('load', handleLoader);
     };
   }, []);
 
