@@ -28,7 +28,7 @@ export default function IndexFooter() {
           </a>
         </Row>
         <Row className="text-secondary justify-content-center pt-4 pb-5">
-          © 2020 IIIT Kota CodeBase
+          © 2021 IIIT Kota CodeBase
         </Row>
       </Container>
     </footer>
