@@ -92,7 +92,6 @@
       "prettier --write",
       "markdownlint --fix"
     ],
-    "*.scss": "stylelint --syntax=scss --fix",
-    "*.html": "prettier --write"
+    "*.scss": "stylelint --syntax=scss --fix"
   }
 }

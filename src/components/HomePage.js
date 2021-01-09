@@ -27,6 +27,13 @@ export default function HomePage() {
       .not(`a[href*="${window.location.hostname}"]`)
       .attr({ target: '_blank', rel: 'noopener noreferrer' });
 
+    $(window).on('load', () => {
+      let count = 0;
+      $('.banner, .loader').fadeOut('slow', () => {
+        if (++count === 2) $('#root').fadeTo('slow', 1);
+      });
+    });
+
     setViewportHeight();
     const handleResize = debounce(setViewportHeight, 200);
     $(window).on('resize', handleResize);
