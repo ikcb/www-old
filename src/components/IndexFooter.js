@@ -1,7 +1,8 @@
 import 'assets/styles/_indexFooter.scss';
 
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import {
   AiOutlineGithub,
   AiOutlineInstagram,

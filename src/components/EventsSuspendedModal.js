@@ -1,7 +1,8 @@
 import $ from 'jquery';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
 import React, { useEffect } from 'react';
-import { Modal, Nav } from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal';
+import Nav from 'react-bootstrap/Nav';
 import getScrollbarWidth from 'utils/ScrollbarWidth';
 
 function EventsSuspendedModal(props) {

@@ -2,9 +2,12 @@ import 'assets/styles/_sectionAbout.scss';
 
 import { ReactComponent as Illustration } from 'assets/images/undraw_code_typing_7jnv.svg';
 import $ from 'jquery';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Jumbotron, Row } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Row from 'react-bootstrap/Row';
 
 export default function SectionAbout() {
   const [displayIllustration, setDisplayIllustration] = useState(true);

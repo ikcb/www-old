@@ -7,7 +7,7 @@ import SectionContact from 'components/SectionContact';
 import SectionMembers from 'components/SectionMembers';
 import TitleBrand from 'components/TitleBrand';
 import $ from 'jquery';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
 import React, { createElement, useEffect } from 'react';
 
 export default function HomePage() {
@@ -30,7 +30,10 @@ export default function HomePage() {
     $(window).on('load', () => {
       let count = 0;
       $('.banner, .loader').fadeOut('slow', () => {
-        if (++count === 2) $('#root').fadeTo('slow', 1);
+        if (++count === 2)
+          $('#root').fadeTo('slow', 1, () => {
+            $('body').attr('style', 'background-color: #fff !important');
+          });
       });
     });
 

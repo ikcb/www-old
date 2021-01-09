@@ -1,11 +1,14 @@
 import 'assets/styles/_titleBrand.scss';
 
-// import ExamplePopup from 'components/ExamplePopup';
 import $ from 'jquery';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { Button, Col, Container, Jumbotron, Row } from 'react-bootstrap';
-import { Link } from 'react-scroll';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Row from 'react-bootstrap/Row';
+import Link from 'react-scroll/modules/components/Link';
 import { Waypoint } from 'react-waypoint';
 import useWindowDimensions from 'utils/WindowDimensions';
 

@@ -3,10 +3,12 @@ import 'assets/styles/_indexNavbar.scss';
 import { ReactComponent as Logo } from 'assets/images/logo.svg';
 import EventsNavLink from 'components/EventsSuspendedModal';
 import $ from 'jquery';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
 import React, { useEffect, useState } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Link from 'react-scroll/modules/components/Link';
 import useWindowDimensions from 'utils/WindowDimensions';
 
 export default function IndexNavbar() {
@@ -80,7 +82,7 @@ export default function IndexNavbar() {
 
   const handleNavbarOnSelect = () =>
     $(document.documentElement).removeClass('nav-open');
-  const scrollToTop = () => scroll.scrollToTop({ duration: 500 });
+  const scrollToTop = () => $('html,body').animate({ scrollTop: 0 }, 500);
   const toggleNavbar = () =>
     $(document.documentElement).toggleClass('nav-open');
 
