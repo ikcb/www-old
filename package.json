@@ -84,14 +84,15 @@
     "package.json": "prettier-package-json --write ",
     "*.js": "eslint --fix",
     "*.svg": "svgo",
-    "*.json": [
-      "jsonlint ",
+    "{*.json,.eslintrc,.prettierrc}": [
+      "jsonlint",
       "prettier --write"
     ],
     "*.md": [
       "prettier --write",
       "markdownlint --fix"
     ],
-    "*.scss": "stylelint --syntax=scss --fix"
+    "*.scss": "stylelint --syntax=scss --fix",
+    "*.html": "prettier --write"
   }
 }
