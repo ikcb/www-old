@@ -26,6 +26,20 @@ footer {
         height: 0.8125em;
       }
     }
+
+    @media (max-width: 424.98px) {
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 374.98px) {
+      font-size: 0.8em;
+      margin: 0 0.3em;
+    }
+
+    @media (max-width: 319.98px) {
+      font-size: 0.7em;
+      margin: 0 0.2em;
+    }
   }
 
   .text-secondary {
