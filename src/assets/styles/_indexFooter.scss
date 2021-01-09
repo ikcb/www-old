@@ -1,0 +1,29 @@
+footer {
+  background: linear-gradient(0deg, #000303 0%, #000303 60%, #030708 100%);
+  border-top: 1px rgba(#42526d, 0.5) solid;
+  font-size: 2em;
+  text-align: center;
+
+  a {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+
+    color: #212529 !important;
+    display: flex;
+    height: 1.6em;
+    justify-content: center;
+    margin: 0 0.4em;
+    width: 1.6em;
+
+    &:hover,
+    &:focus {
+      background-color: #eaeaea;
+    }
+  }
+
+  .text-secondary {
+    font-size: 0.6em;
+    font-weight: 300;
+  }
+}

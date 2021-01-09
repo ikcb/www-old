@@ -1,5 +1,6 @@
 import 'assets/styles/_homePage.scss';
 
+import IndexFooter from 'components/IndexFooter';
 import IndexNavbar from 'components/IndexNavbar';
 import SectionAbout from 'components/SectionAbout';
 import SectionContact from 'components/SectionContact';
@@ -22,6 +23,10 @@ export default function HomePage() {
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
 
+    $('a[href^="http"]')
+      .not(`a[href*="${window.location.hostname}"]`)
+      .attr({ target: '_blank', rel: 'noopener noreferrer' });
+
     setViewportHeight();
     const handleResize = debounce(setViewportHeight, 200);
     $(window).on('resize', handleResize);
@@ -40,6 +45,7 @@ export default function HomePage() {
           {createElement(type)}
         </section>
       ))}
+      <IndexFooter />
     </>
   );
 }

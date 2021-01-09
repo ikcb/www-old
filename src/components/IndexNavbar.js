@@ -126,8 +126,6 @@ export default function IndexNavbar() {
               <li>
                 <a
                   href="https://github.com/iiitkota-codebase"
-                  target="_blank"
-                  rel="noreferrer"
                   className="nav-link"
                   onClick={e => $(e.target).trigger('blur')}
                 >
@@ -138,8 +136,6 @@ export default function IndexNavbar() {
               <li>
                 <a
                   href="https://medium.com/codebase-iiitkota"
-                  target="_blank"
-                  rel="noreferrer"
                   className="nav-link"
                   onClick={e => $(e.target).trigger('blur')}
                 >
