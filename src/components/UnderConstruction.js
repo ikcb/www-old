@@ -18,7 +18,7 @@ export default function UnderConstruction() {
     const handleLoader = () => {
       $('.banner, .loader').fadeOut('fast');
       $('#root').fadeTo('fast', 1);
-      $('body').attr('style', '');
+      $('body').attr('style', 'background-color: #fff !important');
     };
 
     $(window).on('load', handleLoader);

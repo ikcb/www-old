@@ -32,7 +32,7 @@ export default function HomePage() {
       $('.banner, .loader').fadeOut('slow', () => {
         if (++count === 2)
           $('#root').fadeTo('slow', 1, () => {
-            $('body').attr('style', '');
+            $('body').attr('style', 'background-color: #fff !important');
           });
       });
     };
