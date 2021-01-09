@@ -20,6 +20,12 @@ footer {
     &:focus {
       background-color: #eaeaea;
     }
+
+    &[href*='discord'] {
+      > svg {
+        height: 0.8125em;
+      }
+    }
   }
 
   .text-secondary {

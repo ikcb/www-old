@@ -9,6 +9,7 @@ import {
   AiOutlineMail,
   AiOutlineMedium
 } from 'react-icons/ai';
+import { FaDiscord } from 'react-icons/fa';
 
 export default function IndexFooter() {
   return (
@@ -26,6 +27,9 @@ export default function IndexFooter() {
           </a>
           <a href="https://medium.com/codebase-iiitkota">
             <AiOutlineMedium />
+          </a>
+          <a href="https://discord.com/invite/ddaskT9kaM">
+            <FaDiscord />
           </a>
         </Row>
         <Row className="text-secondary justify-content-center pt-4 pb-5">
