@@ -27,13 +27,10 @@ export default function TitleBrand() {
     $('.navbar').addClass('navbar-light bg-light');
   };
 
-  const getTitlePositionFromTop = () => {
-    return (
-      [$('.title-brand h1').css('height'), $('.navbar').css('height')]
-        .map(parseFloat)
-        .reduce((a, b) => a + b, 0) - 16
-    );
-  };
+  const getTitlePositionFromTop = () =>
+    [$('.title-brand h1').css('height'), $('.navbar').css('height')]
+      .map(parseFloat)
+      .reduce((a, b) => a + b, 0) - 16;
 
   const [TitlePositionFromTop, setTitlePositionFromTop] = useState(0);
 
