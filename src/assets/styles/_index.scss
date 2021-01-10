@@ -13,3 +13,9 @@ $input-btn-focus-width: 0;
 body {
   overflow-x: hidden;
 }
+
+nav,
+section {
+  max-width: calc(100vw - var(--scrollbar-width)) !important;
+  overflow-x: hidden !important;
+}
