@@ -48,12 +48,11 @@ export default function IndexNavbar() {
   }, []);
 
   const handleClass = debounce(e => {
-    const y = $(window).scrollTop();
-    $(window).scrollTop(y + 2);
+    $(window).scrollTop($(window).scrollTop() + 3);
 
     $(e.target).addClass('active');
     $('.nav-link.active').not(e.target).removeClass('active');
-  }, 500);
+  }, 600);
 
   const handleLinkOnClick = e => {
     handleClass(e);
