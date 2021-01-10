@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
+import Fade from 'react-reveal/Fade';
 
 export default function SectionAbout() {
   const [displayIllustration, setDisplayIllustration] = useState(true);
@@ -43,15 +44,19 @@ export default function SectionAbout() {
       <Row className="align-content-center">
         <Col lg={7} id="about-col-1">
           <Jumbotron className="bg-transparent text-light m-0">
-            <h1 className="display-0 text-center text-lg-left">About Us</h1>
-            <p className="lead mt-5 w-lg-90">
-              IIIT Kota CodeBase is a community formed by the students of IIIT
-              Kota to promote open source development in the institute and
-              hence, maintain a good coding culture. <br /> We, at CodeBase,
-              explore our technical interests, and enhance our practical coding
-              skills by actively working together to build awesome free and open
-              source projects.
-            </p>
+            <h1 className="display-0 text-center text-lg-left">
+              <Fade bottom>About Us</Fade>
+            </h1>
+            <Fade left delay={400}>
+              <p className="lead mt-5 w-lg-90">
+                IIIT Kota CodeBase is a community formed by the students of IIIT
+                Kota to promote open source development in the institute and
+                hence, maintain a good coding culture. <br /> We, at CodeBase,
+                explore our technical interests, and enhance our practical
+                coding skills by actively working together to build awesome free
+                and open source projects.
+              </p>
+            </Fade>
           </Jumbotron>
         </Col>
         <Col
@@ -61,7 +66,9 @@ export default function SectionAbout() {
           }`}
           id="about-col-2"
         >
-          <Illustration className="w-75 w-lg-100 h-100 pb-5 pb-lg-0" />
+          <Fade right delay={400}>
+            <Illustration className="w-75 w-lg-100 h-100 pb-5 pb-lg-0" />
+          </Fade>
         </Col>
       </Row>
     </Container>

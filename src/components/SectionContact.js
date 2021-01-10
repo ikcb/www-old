@@ -9,6 +9,7 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import { AiOutlineMail, AiOutlineUser } from 'react-icons/ai';
+import Fade from 'react-reveal/Fade';
 import useWindowDimensions from 'utils/WindowDimensions';
 
 export default function SectionContact() {
@@ -44,87 +45,90 @@ export default function SectionContact() {
       <Row>
         <Col lg={5} className="mt-auto mb-lg-auto">
           <h2 className="display-4 text-center py-4 m-0 pt-sm-0 pb-sm-5">
-            Get in Touch
+            <Fade bottom>Get in Touch</Fade>
           </h2>
-          <p className="lead">
-            We are a welcoming community and love to have others working with us
-            regardless of their skill levels. If you have a nice project idea
-            and think that we all together can make it real and big then do
-            contact us.
-          </p>
+          <Fade left>
+            <p className="lead">
+              We are a welcoming community and love to have others working with
+              us regardless of their skill levels. If you have a nice project
+              idea and think that we all together can make it real and big then
+              do contact us.
+            </p>
+          </Fade>
         </Col>
         <Col lg={1} className="d-none d-lg-block p-0" />
         <Col lg={6} className="mb-auto mt-lg-auto">
-          <Form id="contactForm" className="pb-3">
-            <Form.Row>
-              <Form.Group as={Col} lg="6" controlId="contactName">
-                <Form.Label>Name</Form.Label>
-                <InputGroup>
-                  <InputGroup.Prepend>
-                    <InputGroup.Text id="namePrepend">
-                      <AiOutlineUser />
-                    </InputGroup.Text>
-                  </InputGroup.Prepend>
+          <Fade duration={1600} delay={400}>
+            <Form id="contactForm" className="pb-3">
+              <Form.Row>
+                <Form.Group as={Col} lg="6" controlId="contactName">
+                  <Form.Label>Name</Form.Label>
+                  <InputGroup>
+                    <InputGroup.Prepend>
+                      <InputGroup.Text id="namePrepend">
+                        <AiOutlineUser />
+                      </InputGroup.Text>
+                    </InputGroup.Prepend>
+                    <Form.Control
+                      type="text"
+                      placeholder={
+                        width > 992
+                          ? 'Enter your name'
+                          : 'Please enter your name here…'
+                      }
+                      aria-describedby="namePrepend"
+                      name="entry.2005620554"
+                      pattern="[a-zA-Z ,.'-]+"
+                    />
+                  </InputGroup>
+                </Form.Group>
+                <Form.Group as={Col} lg="6" controlId="contactEmail">
+                  <Form.Label>Email</Form.Label>
+                  <InputGroup>
+                    <InputGroup.Prepend>
+                      <InputGroup.Text id="emailPrepend">
+                        <AiOutlineMail />
+                      </InputGroup.Text>
+                    </InputGroup.Prepend>
+                    <Form.Control
+                      type="email"
+                      placeholder={
+                        width > 992
+                          ? 'Enter your email'
+                          : 'And your email address here…'
+                      }
+                      aria-describedby="emailPrepend"
+                      name="entry.1045781291"
+                    />
+                  </InputGroup>
+                </Form.Group>
+              </Form.Row>
+              <Form.Row>
+                <Form.Group as={Col} controlId="contactMessage">
+                  <Form.Label>Message</Form.Label>
                   <Form.Control
-                    type="text"
-                    placeholder={
-                      width > 992
-                        ? 'Enter your name'
-                        : 'Please enter your name here…'
-                    }
-                    aria-describedby="namePrepend"
-                    name="entry.2005620554"
-                    pattern="[a-zA-Z ,.'-]+"
+                    as="textarea"
+                    rows={width < 375 ? 3 : 4}
+                    placeholder="Write your message here… Our inbox is always open!"
+                    name="entry.839337160"
+                    required
                   />
-                </InputGroup>
-              </Form.Group>
-              <Form.Group as={Col} lg="6" controlId="contactEmail">
-                <Form.Label>Email</Form.Label>
-                <InputGroup>
-                  <InputGroup.Prepend>
-                    <InputGroup.Text id="emailPrepend">
-                      <AiOutlineMail />
-                    </InputGroup.Text>
-                  </InputGroup.Prepend>
-                  <Form.Control
-                    type="email"
-                    placeholder={
-                      width > 992
-                        ? 'Enter your email'
-                        : 'And your email address here…'
-                    }
-                    aria-describedby="emailPrepend"
-                    name="entry.1045781291"
-                  />
-                </InputGroup>
-              </Form.Group>
-            </Form.Row>
-            <Form.Row>
-              <Form.Group as={Col} controlId="contactMessage">
-                <Form.Label>Message</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={width < 375 ? 3 : 4}
-                  placeholder="Write your message here… Our inbox is always open!"
-                  name="entry.839337160"
-                  required
-                />
-              </Form.Group>
-            </Form.Row>
-            <Form.Row className="pt-3 pt-sm-4">
-              <Col className="mx-auto text-center">
-                <Button
-                  variant="light"
-                  type="submit"
-                  size="lg"
-                  onClick={e => e.target.blur()}
-                  className="rounded-0"
-                >
-                  Send Message
-                </Button>
-              </Col>
-            </Form.Row>
-          </Form>
+                </Form.Group>
+              </Form.Row>
+              <Form.Row className="pt-3 pt-sm-4">
+                <Col className="mx-auto text-center">
+                  <Button
+                    variant="light"
+                    type="submit"
+                    size="lg"
+                    onClick={e => e.target.blur()}
+                  >
+                    Send Message
+                  </Button>
+                </Col>
+              </Form.Row>
+            </Form>
+          </Fade>
         </Col>
       </Row>
     </Container>

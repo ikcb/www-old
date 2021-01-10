@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
+import Fade from 'react-reveal/Fade';
 import Link from 'react-scroll/modules/components/Link';
 import { Waypoint } from 'react-waypoint';
 import useWindowDimensions from 'utils/WindowDimensions';
@@ -52,10 +53,16 @@ export default function TitleBrand() {
     };
   }, []);
 
+  const [startAnimation, setStartAnimation] = useState(false);
+
+  useEffect(() => {
+    $(window).on('load', () => setTimeout(() => setStartAnimation(true), 500));
+  }, []);
+
   return (
     <Container fluid className="bg title-brand" ref={el}>
-      <Container fluid="lg" className="h-100">
-        <Row className="align-items-center h-100">
+      <Container fluid="lg" className="vh-100">
+        <Row className="align-items-center vh-100">
           <Col lg={7}>
             <Jumbotron className="bg-transparent text-light text-center text-lg-left">
               <Waypoint
@@ -63,42 +70,52 @@ export default function TitleBrand() {
                 onLeave={handleNavbarOnLeave}
                 topOffset={TitlePositionFromTop}
               >
-                <h1 className="display-0 mt-4">IIIT Kota CodeBase</h1>
+                <h1 className="display-0 mt-4">
+                  <Fade bottom when={startAnimation}>
+                    IIIT Kota CodeBase
+                  </Fade>
+                </h1>
               </Waypoint>
               <h2 className="lead mt-4">
-                The Free and Open Source Society of IIIT Kota
+                <Fade bottom when={startAnimation} delay={400}>
+                  The Free and Open Source Society of IIIT Kota
+                </Fade>
               </h2>
-              <Link
-                to="about"
-                smooth
-                duration={500}
-                offset={width < 992 ? -78 : -66}
-              >
-                <Button
-                  className="mt-5 mr-sm-3 rounded-0"
-                  variant="outline-light-x"
-                  size="lg"
-                  id="btn-1"
-                >
-                  Discover More
-                </Button>
-              </Link>
-              <br className="d-sm-none" />
-              <Link
-                to="contact"
-                smooth
-                duration={500}
-                offset={width < 992 ? -78 : -66}
-              >
-                <Button
-                  className="mt-3 mt-sm-5 ml-sm-3 rounded-0"
-                  variant="outline-light-x"
-                  size="lg"
-                  id="btn-2"
-                >
-                  Join the Team
-                </Button>
-              </Link>
+              <Fade when={startAnimation} delay={1000}>
+                <span>
+                  <Link
+                    to="about"
+                    smooth
+                    duration={500}
+                    offset={width < 992 ? -78 : -66}
+                  >
+                    <Button
+                      className="mt-5 mr-sm-3 rounded-0"
+                      variant="outline-light-x"
+                      size="lg"
+                      id="btn-1"
+                    >
+                      Discover More
+                    </Button>
+                  </Link>
+                  <br className="d-sm-none" />
+                  <Link
+                    to="contact"
+                    smooth
+                    duration={500}
+                    offset={width < 992 ? -78 : -66}
+                  >
+                    <Button
+                      className="mt-3 mt-sm-5 ml-sm-3 rounded-0"
+                      variant="outline-light-x"
+                      size="lg"
+                      id="btn-2"
+                    >
+                      Join the Team
+                    </Button>
+                  </Link>
+                </span>
+              </Fade>
             </Jumbotron>
           </Col>
         </Row>

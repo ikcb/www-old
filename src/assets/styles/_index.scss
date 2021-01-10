@@ -9,3 +9,13 @@ $btn-focus-box-shadow: none;
 $input-btn-focus-width: 0;
 
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  overflow-x: hidden;
+}
+
+nav,
+section {
+  max-width: calc(100vw - var(--scrollbar-width)) !important;
+  overflow-x: hidden !important;
+}
