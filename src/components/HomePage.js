@@ -30,6 +30,7 @@ export default function HomePage() {
     const handleLoader = () => {
       let count = 0;
       $('.banner, .loader').fadeOut('slow', () => {
+        $('body').attr('style', '');
         if (++count === 2)
           $('#root').fadeTo('slow', 1, () => {
             $('body').attr('style', 'background-color: #fff !important');

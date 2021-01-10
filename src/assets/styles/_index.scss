@@ -9,3 +9,7 @@ $btn-focus-box-shadow: none;
 $input-btn-focus-width: 0;
 
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  overflow-x: hidden;
+}
