@@ -1,6 +1,6 @@
 # IIIT Kota CodeBase
 
-<!-- discord-fix-edit -->
+<!-- discord-fix-edit-1 -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
