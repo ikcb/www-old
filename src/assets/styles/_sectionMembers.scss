@@ -46,4 +46,8 @@
       position: relative;
     }
   }
+
+  .col-12 > div {
+    height: 100%;
+  }
 }

@@ -7,6 +7,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Gravatar from 'react-gravatar';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import Pulse from 'react-reveal/Pulse';
+import Zoom from 'react-reveal/Zoom';
 
 export default function SectionMembers() {
   const teamMembers = [
@@ -77,29 +79,35 @@ export default function SectionMembers() {
 
   const MemberCard = member => (
     <Col xs={12} sm={6} lg={4} key={member.id} className="my-5">
-      <Card bg="dark" className="text-center h-100 rounded-0 hover-item">
-        <Card.Body>
-          <Gravatar
-            size={100}
-            email={`${member.id}@iiitkota.ac.in`}
-            className="rounded-circle"
-          />
-          <Card.Title className="text-uppercase mt-4">{member.name}</Card.Title>
-          <Card.Subtitle className="pt-1 pb-2">{member.role}</Card.Subtitle>
-          <Card.Link href={`https://github.com/${member.github}`}>
-            <FaGithub />
-          </Card.Link>
-          <Card.Link href={`https://www.linkedin.com/in/${member.linkedin}`}>
-            <FaLinkedinIn />
-          </Card.Link>
-        </Card.Body>
-      </Card>
+      <Pulse>
+        <Card bg="dark" className="text-center h-100 rounded-0 hover-item">
+          <Card.Body>
+            <Gravatar
+              size={100}
+              email={`${member.id}@iiitkota.ac.in`}
+              className="rounded-circle"
+            />
+            <Card.Title className="text-uppercase mt-4">
+              {member.name}
+            </Card.Title>
+            <Card.Subtitle className="pt-1 pb-2">{member.role}</Card.Subtitle>
+            <Card.Link href={`https://github.com/${member.github}`}>
+              <FaGithub />
+            </Card.Link>
+            <Card.Link href={`https://www.linkedin.com/in/${member.linkedin}`}>
+              <FaLinkedinIn />
+            </Card.Link>
+          </Card.Body>
+        </Card>
+      </Pulse>
     </Col>
   );
 
   return (
     <Container className="text-light py-5 mx-auto">
-      <h1 className="display-0 text-center pb-5">Core Team</h1>
+      <h1 className="display-0 text-center pb-5">
+        <Zoom>Core Team</Zoom>
+      </h1>
       <Row className="justify-content-center">
         {teamMembers.map(member => MemberCard(member))}
       </Row>
