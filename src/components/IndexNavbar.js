@@ -136,7 +136,7 @@ export default function IndexNavbar() {
               <NavLink name="Members" />
               <li>
                 <a
-                  href="https://medium.com/codebase-iiitkota"
+                  href="https://medium.com/iiitkota-codebase"
                   className="nav-link"
                   onClick={e => $(e.target).trigger('blur')}
                 >

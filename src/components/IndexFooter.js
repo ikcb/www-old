@@ -28,7 +28,7 @@ export default function IndexFooter() {
             <a href="mailto:codebase@iiitkota.tech">
               <AiOutlineMail />
             </a>
-            <a href="https://medium.com/codebase-iiitkota">
+            <a href="https://medium.com/iiitkota-codebase">
               <AiOutlineMedium />
             </a>
             <a href="https://discord.com/invite/ddaskT9kaM">
