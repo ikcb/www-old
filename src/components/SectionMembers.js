@@ -104,13 +104,15 @@ export default function SectionMembers() {
   );
 
   return (
-    <Container className="text-light py-5 mx-auto">
-      <h1 className="display-0 text-center pb-5">
-        <Zoom>Core Team</Zoom>
-      </h1>
-      <Row className="justify-content-center">
-        {teamMembers.map(member => MemberCard(member))}
-      </Row>
-    </Container>
+    <div className="d-flex align-items-center">
+      <Container className="text-light py-5 mx-auto">
+        <h1 className="display-0 text-center pb-5">
+          <Zoom>Core Team</Zoom>
+        </h1>
+        <Row className="justify-content-center">
+          {teamMembers.map(member => MemberCard(member))}
+        </Row>
+      </Container>
+    </div>
   );
 }

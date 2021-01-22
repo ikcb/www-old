@@ -3,6 +3,10 @@
 #members {
   background-color: #000303;
 
+  > div {
+    min-height: inherit;
+  }
+
   .bg-dark {
     background-color: #0e1213 !important;
   }
