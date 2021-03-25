@@ -28,6 +28,6 @@
     "jest": true,
     "node": true
   },
-  "extends": ["airbnb", "airbnb/hooks", "prettier", "prettier/react"],
+  "extends": ["airbnb", "airbnb/hooks", "prettier"],
   "plugins": ["autofix", "prettier"]
 }

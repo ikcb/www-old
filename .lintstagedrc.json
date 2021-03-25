@@ -1,0 +1,8 @@
+{
+  "package.json": "prettier-package-json --write ",
+  "*.js": "eslint --fix --max-warnings 0",
+  "*.svg": "svgo",
+  "*.json": ["jsonlint", "prettier --write"],
+  "*.md": ["prettier --write", "markdownlint --fix"],
+  "*.scss": "stylelint --syntax=scss --fix"
+}
