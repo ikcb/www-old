@@ -4,17 +4,14 @@
   "homepage": "https://codebase.iiitkota.tech/",
   "version": "0.1.0",
   "scripts": {
+    "prebuild": "svgo -f ./src/assets/images",
     "build": "react-scripts build",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
-    "eject": "react-scripts eject",
     "lint": "lint-staged --allow-empty",
-    "start": "react-scripts start",
-    "test": "react-scripts test"
+    "start": "react-scripts start"
   },
   "optionalDependencies": {
     "popper.js": "^1.16.1",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.4"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
@@ -33,9 +30,9 @@
     "react-waypoint": "^9.0.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.0.1",
-    "@commitlint/config-conventional": "^12.0.1",
-    "eslint": "^7.22.0",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "eslint": "^7.23.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-autofix": "^1.0.4",
@@ -44,7 +41,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.23.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^5.2.0",
+    "husky": "^6.0.0",
     "import-sort-style-module": "^6.0.0",
     "jsonlint": "^1.6.3",
     "lint-staged": "^10.5.4",
@@ -57,7 +54,7 @@
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.2.0",
-    "svgo": "^2.2.2"
+    "svgo": "^2.3.0"
   },
   "browserslist": {
     "production": [

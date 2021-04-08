@@ -4,5 +4,7 @@
   "*.svg": "svgo",
   "*.json": ["jsonlint", "prettier --write"],
   "*.md": ["prettier --write", "markdownlint --fix"],
-  "*.scss": "stylelint --syntax=scss --fix"
+  "*.scss": "stylelint --syntax=scss --fix",
+  "*.yml": "prettier --write",
+  "*.html": "prettier --write"
 }
