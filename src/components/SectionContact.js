@@ -2,23 +2,22 @@ import 'assets/styles/_sectionContact.scss';
 
 import $ from 'jquery';
 import React, { useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
+// import Form from 'react-bootstrap/Form';
+// import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
-import { AiOutlineMail, AiOutlineUser } from 'react-icons/ai';
+// import { AiOutlineMail, AiOutlineUser } from 'react-icons/ai';
 import Fade from 'react-reveal/Fade';
-import useWindowDimensions from 'utils/WindowDimensions';
+// import useWindowDimensions from 'utils/WindowDimensions';
 
 export default function SectionContact() {
   useEffect(() => {
     $('#contactForm').on('submit', function (e) {
       e.preventDefault();
       $.ajax({
-        url:
-          'https://cors-anywhere.herokuapp.com/docs.google.com:443/forms/d/e/1FAIpQLSdZZjCcFiOWlpvENNgojH9tFqY1DX-1aV9ZNl9pUNe8BHrZWQ/formResponse',
+        url: 'https://cors-anywhere.herokuapp.com/docs.google.com:443/forms/d/e/1FAIpQLSdZZjCcFiOWlpvENNgojH9tFqY1DX-1aV9ZNl9pUNe8BHrZWQ/formResponse',
         method: 'POST',
         data: $(this).serialize(),
         success: () => {
@@ -38,7 +37,7 @@ export default function SectionContact() {
     };
   }, []);
 
-  const { width } = useWindowDimensions();
+  // const { width } = useWindowDimensions();
 
   return (
     <Container className="section-contact text-light">
@@ -59,16 +58,17 @@ export default function SectionContact() {
         <Col lg={1} className="d-none d-lg-block p-0" />
         <Col lg={6} className="mb-auto mt-lg-auto">
           <Fade duration={1600} delay={400}>
-            <Form id="contactForm" className="pb-3">
+            {/*
+          <Form id="contactForm" className="pb-3">
               <Form.Row>
                 <Form.Group as={Col} lg="6" controlId="contactName">
                   <Form.Label>Name</Form.Label>
                   <InputGroup>
-                    <InputGroup.Prepend>
+                    <InputGroup>
                       <InputGroup.Text id="namePrepend">
                         <AiOutlineUser />
                       </InputGroup.Text>
-                    </InputGroup.Prepend>
+                    </InputGroup>
                     <Form.Control
                       type="text"
                       placeholder={
@@ -85,11 +85,11 @@ export default function SectionContact() {
                 <Form.Group as={Col} lg="6" controlId="contactEmail">
                   <Form.Label>Email</Form.Label>
                   <InputGroup>
-                    <InputGroup.Prepend>
+                    <InputGroup>
                       <InputGroup.Text id="emailPrepend">
                         <AiOutlineMail />
                       </InputGroup.Text>
-                    </InputGroup.Prepend>
+                    </InputGroup>
                     <Form.Control
                       type="email"
                       placeholder={
@@ -128,6 +128,7 @@ export default function SectionContact() {
                 </Col>
               </Form.Row>
             </Form>
+          */}
           </Fade>
         </Col>
       </Row>

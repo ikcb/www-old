@@ -6,7 +6,7 @@ import debounce from 'lodash/debounce';
 import React, { useEffect, useState } from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import Jumbotron from 'react-bootstrap/Jumbotron';
+// import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 import Fade from 'react-reveal/Fade';
 
@@ -43,7 +43,8 @@ export default function SectionAbout() {
     <Container className="section-about">
       <Row className="align-content-center">
         <Col lg={7} id="about-col-1">
-          <Jumbotron className="bg-transparent text-light m-0">
+          {/*
+        <Jumbotron className="bg-transparent text-light m-0">
             <h1 className="display-0 text-center text-lg-left">
               <Fade bottom>About Us</Fade>
             </h1>
@@ -58,6 +59,7 @@ export default function SectionAbout() {
               </p>
             </Fade>
           </Jumbotron>
+        */}
         </Col>
         <Col
           lg={5}

@@ -6,7 +6,7 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import Jumbotron from 'react-bootstrap/Jumbotron';
+// import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 import Fade from 'react-reveal/Fade';
 import Link from 'react-scroll/modules/components/Link';
@@ -64,7 +64,8 @@ export default function TitleBrand() {
       <Container fluid="lg" className="vh-100">
         <Row className="align-items-center vh-100">
           <Col lg={7}>
-            <Jumbotron className="bg-transparent text-light text-center text-lg-left">
+            {/**/}
+            <div className="bg-transparent text-light text-center text-lg-left">
               <Waypoint
                 onEnter={handleNavbarOnEnter}
                 onLeave={handleNavbarOnLeave}
@@ -116,7 +117,7 @@ export default function TitleBrand() {
                   </Link>
                 </span>
               </Fade>
-            </Jumbotron>
+            </div>
           </Col>
         </Row>
       </Container>
